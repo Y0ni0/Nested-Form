@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, MainContainer, StyledForm } from './Grupos.styled'
+import { StyledGroupHeader, MainContainer, StyledForm, StyledFormSeparator, StyledSubForm, StyledInput, StyledAddButton, StyledRemoveButton } from './Grupos.styled'
 
 
 function Grupos() {
@@ -7,22 +7,30 @@ function Grupos() {
         <MainContainer>
             <h4> Grupos / Slots</h4>
             <StyledForm>
-                <h4>#</h4>
-                <h4>Grupos</h4>
-                <h4>Slot</h4>
-                <div>
-                    <button>-</button>
-                    <input type="text" name="group1" placeholder='group1' />
-                    <div>
-                        <form>
-                            <input type="text" name="g1_slot1" placeholder='g1_slot1' />
-                            <button>-</button>
-                            <button>+ Add Slot</button>
-                        </form>
+                <StyledGroupHeader>
+                    <h4>#</h4>
+                    <h4 className='groupsHeader'>Groups</h4>
+                    <h4 className='slotHeader'>Slot</h4>
+                </StyledGroupHeader>
+                <StyledFormSeparator>
+                    <div className='groupRemover'>
+                        <StyledRemoveButton>-</StyledRemoveButton>
+                        <StyledInput type="text" name="group1" placeholder='group1' />
                     </div>
-                    <button>+ Add Group</button>
-                </div>
+                    <StyledSubForm>
+                        <div>
+                            <StyledInput type="text" name="g1_slot1" placeholder='g1_slot1' />
+                            <StyledRemoveButton>-</StyledRemoveButton>
+                        </div>
+                        <div>
+                            <StyledInput type="text" name="g2_slot2" placeholder='g2_slot2' />
+                            <StyledRemoveButton>-</StyledRemoveButton>
+                        </div>
+                        <StyledAddButton>+ Add Slot</StyledAddButton>
+                    </StyledSubForm>
 
+                </StyledFormSeparator>
+                <StyledAddButton>+ Add Group</StyledAddButton>
             </StyledForm>
 
         </MainContainer>
