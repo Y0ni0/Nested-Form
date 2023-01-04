@@ -1,22 +1,21 @@
 import React from 'react'
+import { Header, MainContainer, StyledForm } from './Grupos.styled'
 
 
 function Grupos() {
     return (
-        <div>
+        <MainContainer>
             <h4> Grupos / Slots</h4>
-            <div>
+            <StyledForm>
                 <h4>#</h4>
                 <h4>Grupos</h4>
                 <h4>Slot</h4>
-            </div>
-            <form>
                 <div>
                     <button>-</button>
-                    <input type="text" name="group1" />
+                    <input type="text" name="group1" placeholder='group1' />
                     <div>
                         <form>
-                            <input type="text" name="g1_slot1" />
+                            <input type="text" name="g1_slot1" placeholder='g1_slot1' />
                             <button>-</button>
                             <button>+ Add Slot</button>
                         </form>
@@ -24,9 +23,9 @@ function Grupos() {
                     <button>+ Add Group</button>
                 </div>
 
-            </form>
+            </StyledForm>
 
-        </div>
+        </MainContainer>
     )
 }
 
