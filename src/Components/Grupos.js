@@ -30,6 +30,11 @@ function Grupos() {
         console.log("add slot clicked")
         console.log(inputFields)
     }
+    const handleRemoveGroup = (index) => {
+        const values = [...inputFields];
+        values.splice(index, 1);
+        setinputFields(values)
+    }
     return (
         <MainContainer>
             <h4> Grupos / Slots</h4>
@@ -44,7 +49,9 @@ function Grupos() {
                             </StyledGroupHeader>
                             <StyledFormSeparator >
                                 <div className='groupRemover'>
-                                    <StyledRemoveButton>-</StyledRemoveButton>
+                                    <StyledRemoveButton
+                                        onClick={() => handleRemoveGroup(index)}
+                                    >-</StyledRemoveButton>
                                     <StyledInput
                                         type="text"
                                         name="group"
