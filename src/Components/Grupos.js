@@ -24,8 +24,8 @@ function Grupos() {
         e.preventDefault();
         setinputFields([...inputFields, { group: '', slots: [{ slot: '' }] }])
     }
-    const addSlot = (e) => {
-        e.preventDefault();
+    const addSlot = (index) => {
+        //e.preventDefault();
         //setinputFields([...inputFields, { slot: { slot: '' } }])
         console.log("add slot clicked")
         console.log(inputFields)
@@ -75,7 +75,7 @@ function Grupos() {
                                             <StyledRemoveButton>-</StyledRemoveButton>
                                         </div>
                                     </StyledSubForm>
-                                    <StyledAddButton onClick={addSlot}>+ Add Slot</StyledAddButton>
+                                    <StyledAddButton onClick={() => addSlot(index)}>+ Add Slot</StyledAddButton>
                                 </div>
                             </StyledFormSeparator>
 
