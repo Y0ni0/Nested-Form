@@ -27,6 +27,9 @@ export const StyledForm = styled.form`
 export const StyledGroupHeader = styled.header`
    display: flex;
    justify-content: space-around;
+   border-bottom: 1px solid #cacaca;
+   padding-bottom: 5px;
+   margin: 5px;
    .groupsHeader{
     padding-left: 20px;
     padding-right: 285px;
@@ -34,6 +37,7 @@ export const StyledGroupHeader = styled.header`
    .slotHeader{
     flex-grow: 1;
    }
+
 `
 export const StyledFormSeparator = styled.div`
     display: flex;
@@ -44,7 +48,7 @@ export const StyledFormSeparator = styled.div`
     align-self: flex-start;
   }
 `
-export const StyledSubForm = styled.form`
+export const StyledSubForm = styled.div`
         display: flex;
         flex-direction: column;
         gap: 6px;
@@ -100,4 +104,10 @@ export const StyledRemoveButton = styled.button`
         transform: scale(1.5px);
         background-color: #b80000;
     }
+`
+export const StyledFormContainer = styled.div`
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
 `
