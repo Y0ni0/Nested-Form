@@ -1,22 +1,20 @@
 import { ThemeProvider } from 'styled-components';
-import Grupos from './Components/Grupos';
-import './App.css'
+import Groups from './Components/Grupos';
+import './App.css';
 
 const theme = {
-    colors: {
-        header: 'rgb(214, 214, 214)',
-        body: '#fff',
-        footer: '#003333'
-    }
-
-}
+  colors: {
+    header: 'rgb(214, 214, 214)',
+    body: '#fff',
+    footer: '#003333',
+  },
+};
 function App() {
-
-    return (
-        <ThemeProvider theme={theme}>
-            <Grupos />
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider theme={theme}>
+      <Groups />
+    </ThemeProvider>
+  );
 }
 
 export default App;
