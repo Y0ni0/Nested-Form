@@ -44,15 +44,18 @@ function Groups() {
     setInputFields([...inputFields]);
   };
   const handleRemoveGroup = (index) => {
-    const values = [...inputFields[index]];
+    //e.preventDefault();
+    const values = [...inputFields];
     values.splice(index, 1);
     setInputFields(values);
   };
 
   const handleRemoveSlot = (groupIndex, slotIndex) => {
-    inputFields[groupIndex].slots.splice(slotIndex, 1);
-
-    setInputFields([...inputFields]);
+    //e.preventDefault();
+    const values = [...inputFields];
+    values[groupIndex].slots.splice(slotIndex, 1);
+    console.log(values)
+    setInputFields(values);
   };
 
   return (
