@@ -14,18 +14,19 @@ import {
 function Groups() {
   const textInput = useRef(null);
   const [inputFields, setInputFields] = useState([
-    { group: 'Blood', slots: ['ABO', 'XYZ', 'B', 'O'] },
+    { group: 'Blood', slots: ['AB', 'bcd'] },
   ]);
 
   const handleSlotChange = (event, groupIndex, slotIndex) => {
-    console.log('Handle Slot Change is calleD@');
-    inputFields[groupIndex].slots[slotIndex] = event.target.value;
+    event.preventDefault();
+    const data = [...inputFields];
+    data[groupIndex].slots[slotIndex] = event.target.value;
 
-    setInputFields([...inputFields]);
-    console.log(
-      'UPDATED: ',
-      (inputFields[groupIndex].slots[slotIndex] = event.target.value)
-    );
+    setInputFields(data);
+    // console.log(
+    //   'UPDATED: ',
+    //   (data[groupIndex].slots[slotIndex])
+    // );
   };
   const handleFormChange = (index, event) => {
     const data = [...inputFields];
@@ -43,7 +44,7 @@ function Groups() {
     setInputFields([...inputFields]);
   };
   const handleRemoveGroup = (index) => {
-    const values = [...inputFields];
+    const values = [...inputFields[index]];
     values.splice(index, 1);
     setInputFields(values);
   };
@@ -82,7 +83,7 @@ function Groups() {
                 </div>
                 <div>
                   {inputField.slots.map((slot, si) => (
-                    <StyledSubForm key={slot + si}>
+                    <StyledSubForm key={si}>
                       <div>
                         <StyledInput
                           id={'slot' + si}
