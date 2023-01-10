@@ -14,7 +14,7 @@ import {
 function Groups() {
   const textInput = useRef(null);
   const [inputFields, setInputFields] = useState([
-    { group: 'Blood', slots: ['AB', 'bcd'] },
+    { group: 'Blood', slots: ['AB', 'bcd', 'cd'] },
   ]);
 
   const handleSlotChange = (event, groupIndex, slotIndex) => {
