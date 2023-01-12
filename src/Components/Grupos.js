@@ -23,10 +23,10 @@ function Groups() {
     data[groupIndex].slots[slotIndex] = event.target.value;
 
     setInputFields(data);
-    // console.log(
-    //   'UPDATED: ',
-    //   (data[groupIndex].slots[slotIndex])
-    // );
+    console.log(
+      'UPDATED: ',
+      (data[groupIndex].slots[slotIndex])
+    );
   };
   const handleFormChange = (index, event) => {
     const data = [...inputFields];
